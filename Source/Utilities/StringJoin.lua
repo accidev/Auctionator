@@ -1,13 +1,13 @@
 function Auctionator.Utilities.StringJoin(array, delimiter)
-  local result = ""
+	local result = ""
 
-  for index, item in ipairs(array) do
-    if index == #array then
-      result = result .. item
-    else
-      result = result .. item .. delimiter
-    end
-  end
+	for index, item in ipairs(array) do
+		if index == #array then
+			result = result .. item
+		else
+			result = result .. item .. delimiter
+		end
+	end
 
-  return result
+	return result
 end

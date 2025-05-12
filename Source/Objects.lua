@@ -1,44 +1,44 @@
 Auctionator = {
-  Debug = {},
-  Constants = {},
-  Utilities = {},
-  Events = {},
-  SlashCmd = {},
+	Debug = {},
+	Constants = {},
+	Utilities = {},
+	Events = {},
+	SlashCmd = {},
 
-  State = {
-    Loaded = false,
-    CurrentVersion = nil,
-  },
+	State = {
+		Loaded = false,
+		CurrentVersion = nil
+	},
 
-  SavedState = {},
-  Search = {
-    Categories = {},
-    CategoryLookup = {},
-    Filters = {},
-  },
-  Tooltip = {},
-  Locales = {},
-  Config = {},
-  Variables = {},
-  ShoppingLists = {},
-  Cancelling = {},
-  Enchant = {},
-  Selling = {},
-  Components = {},
-  ReagentSearch = {},
-  IncrementalScan = {},
-  FullScan = {},
-  PostingHistory = {},
+	SavedState = {},
+	Search = {
+		Categories = {},
+		CategoryLookup = {},
+		Filters = {}
+	},
+	Tooltip = {},
+	Locales = {},
+	Config = {},
+	Variables = {},
+	ShoppingLists = {},
+	Cancelling = {},
+	Enchant = {},
+	Selling = {},
+	Components = {},
+	ReagentSearch = {},
+	IncrementalScan = {},
+	FullScan = {},
+	PostingHistory = {},
 
-  Tabs = {
-    State = {
-      knownTabs= {}
-    },
-  },
+	Tabs = {
+		State = {
+			knownTabs = {}
+		}
+	},
 
-  API = {
-    v1 = {}
-  },
-  
-  AH = {}
+	API = {
+		v1 = {}
+	},
+
+	AH = {}
 }

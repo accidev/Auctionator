@@ -1,73 +1,75 @@
 AuctionatorConfigMinMaxMixin = CreateFromMixins(AuctionatorConfigTooltipMixin)
 
 function AuctionatorConfigMinMaxMixin:OnLoad()
-  self.onTabOut = function() end
-  self.onEnter = function() end
+	self.onTabOut = function()
+	end
+	self.onEnter = function()
+	end
 
-  local titleText = self:GetAttribute("titleText")
-  titleText = _G[titleText] or titleText
+	local titleText = self:GetAttribute("titleText")
+	titleText = _G[titleText] or titleText
 
-  if titleText ~= nil then
-    self.Title:SetText(titleText)
-  end
+	if titleText ~= nil then
+		self.Title:SetText(titleText)
+	end
 
-  self.ResetButton:SetClickCallback(function()
-    self:Reset()
-  end)
+	self.ResetButton:SetClickCallback(function()
+		self:Reset()
+	end)
 end
 
 function AuctionatorConfigMinMaxMixin:SetFocus()
-  self.MinBox:SetFocus()
+	self.MinBox:SetFocus()
 end
 
 function AuctionatorConfigMinMaxMixin:SetCallbacks(callbacks)
-  self.onTabOut = callbacks.OnTab or function() end
-  self.onEnter = callbacks.OnEnter or function() end
+	self.onTabOut = callbacks.OnTab or function()
+	end
+	self.onEnter = callbacks.OnEnter or function()
+	end
 end
 
 function AuctionatorConfigMinMaxMixin:OnEnterPressed()
-  self.onEnter()
+	self.onEnter()
 end
 
 function AuctionatorConfigMinMaxMixin:MinTabPressed()
-  self.MaxBox:SetFocus()
+	self.MaxBox:SetFocus()
 end
 
 function AuctionatorConfigMinMaxMixin:MaxTabPressed()
-  self.onTabOut()
+	self.onTabOut()
 end
 
 function AuctionatorConfigMinMaxMixin:GetValue()
-  return self.MinBox:GetText() ..
-    Auctionator.Constants.AdvancedSearchDivider ..
-    self.MaxBox:GetText()
+	return self.MinBox:GetText() .. Auctionator.Constants.AdvancedSearchDivider .. self.MaxBox:GetText()
 end
 
 function AuctionatorConfigMinMaxMixin:GetMin(value)
-  return self.MinBox:GetNumber(value)
+	return self.MinBox:GetNumber(value)
 end
 
 function AuctionatorConfigMinMaxMixin:GetMax(value)
-  return self.MaxBox:GetNumber(value)
+	return self.MaxBox:GetNumber(value)
 end
 
 function AuctionatorConfigMinMaxMixin:SetMin(value)
-  if value == nil then
-    self.MinBox:SetText("")
-  else
-    self.MinBox:SetNumber(value)
-  end
+	if value == nil then
+		self.MinBox:SetText("")
+	else
+		self.MinBox:SetNumber(value)
+	end
 end
 
 function AuctionatorConfigMinMaxMixin:SetMax(value)
-  if value == nil then
-    self.MaxBox:SetText("")
-  else
-    self.MaxBox:SetNumber(value)
-  end
+	if value == nil then
+		self.MaxBox:SetText("")
+	else
+		self.MaxBox:SetNumber(value)
+	end
 end
 
 function AuctionatorConfigMinMaxMixin:Reset()
-  self.MinBox:SetText("")
-  self.MaxBox:SetText("")
+	self.MinBox:SetText("")
+	self.MaxBox:SetText("")
 end

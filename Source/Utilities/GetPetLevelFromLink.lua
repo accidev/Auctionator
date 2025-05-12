@@ -1,5 +1,5 @@
 function Auctionator.Utilities.GetPetLevelFromLink(itemLink)
-  local _, _, level = strsplit(":", itemLink)
+	local _, _, level = strsplit(":", itemLink)
 
-  return tonumber(level)
+	return tonumber(level)
 end

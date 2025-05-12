@@ -4,33 +4,32 @@ local CreateDialogOnAccept = Auctionator.ShoppingLists.Events.CreateDialogOnAcce
 local ListCreated = Auctionator.ShoppingLists.Events.ListCreated
 
 function AuctionatorListCreateButtonMixin:OnLoad()
-  DynamicResizeButton_Resize(self)
+	DynamicResizeButton_Resize(self)
 
-  self:SetUpEvents()
+	self:SetUpEvents()
 end
 
 function AuctionatorListCreateButtonMixin:SetUpEvents()
-  Auctionator.EventBus:RegisterSource(self, "Shopping List Create Button")
+	Auctionator.EventBus:RegisterSource(self, "Shopping List Create Button")
 
-  Auctionator.EventBus:Register( self, { CreateDialogOnAccept })
+	Auctionator.EventBus:Register(self, {CreateDialogOnAccept})
 end
 
 function AuctionatorListCreateButtonMixin:ReceiveEvent(eventName, listName)
-  if eventName == CreateDialogOnAccept then
-    self:CreateList(listName)
-  end
+	if eventName == CreateDialogOnAccept then
+		self:CreateList(listName)
+	end
 end
 
 function AuctionatorListCreateButtonMixin:OnClick()
-  StaticPopup_Show(Auctionator.Constants.DialogNames.CreateShoppingList)
+	StaticPopup_Show(Auctionator.Constants.DialogNames.CreateShoppingList)
 end
 
 function AuctionatorListCreateButtonMixin:CreateList(listName)
-  listName = Auctionator.ShoppingLists.GetUnusedListName(listName)
+	listName = Auctionator.ShoppingLists.GetUnusedListName(listName)
 
-  Auctionator.ShoppingLists.Create(listName)
+	Auctionator.ShoppingLists.Create(listName)
 
-  Auctionator.EventBus:Fire(
-    self, ListCreated, Auctionator.ShoppingLists.Lists[Auctionator.ShoppingLists.ListIndex(listName)]
-  )
+	Auctionator.EventBus:Fire(self, ListCreated,
+		Auctionator.ShoppingLists.Lists[Auctionator.ShoppingLists.ListIndex(listName)])
 end

@@ -1,27 +1,27 @@
 AuctionatorPanelConfigMixin = {}
 
 function AuctionatorPanelConfigMixin:SetupPanel()
-  self.cancel = function()
-    self:Cancel()
-  end
+	self.cancel = function()
+		self:Cancel()
+	end
 
-  self.okay = function()
-    self:Save()
-  end
+	self.okay = function()
+		self:Save()
+	end
 
-  InterfaceOptions_AddCategory(self, "Auctionator")
+	InterfaceOptions_AddCategory(self, "Auctionator")
 end
 
 function AuctionatorPanelConfigMixin:IndentationForSubSection()
-  return "   "
+	return "   "
 end
 
 -- Derive
 function AuctionatorPanelConfigMixin:Cancel()
-  Auctionator.Debug.Message("AuctionatorPanelConfigMixin:Cancel() Unimplemented")
+	Auctionator.Debug.Message("AuctionatorPanelConfigMixin:Cancel() Unimplemented")
 end
 
 -- Derive
 function AuctionatorPanelConfigMixin:Save()
-  Auctionator.Debug.Message("AuctionatorPanelConfigMixin:Save() Unimplemented")
+	Auctionator.Debug.Message("AuctionatorPanelConfigMixin:Save() Unimplemented")
 end

@@ -26,35 +26,26 @@
 -- ITEM_SEARCH_RESULTS_UPDATED: itemKey, newAuctionID
 -- OWNED_AUCTIONS_UPDATED
 -- REPLICATE_ITEM_LIST_UPDATE
-
 -- ORIGINAL EVENTS LISTENERS TODO
-  -- -- self:RegisterEvent("AUCTION_ITEM_LIST_UPDATE");
-  -- -- self:RegisterEvent("AUCTION_OWNED_LIST_UPDATE");
-  -- -- self:RegisterEvent("NEW_AUCTION_UPDATE");
-
-
-local AUCTIONATOR_EVENTS = {
-  -- Addon Initialization Events
-  "VARIABLES_LOADED",
-  -- Trade Window Initialization Events
-  "TRADE_SKILL_SHOW",
-  -- Cache vendor prices event
-  "MERCHANT_SHOW",
-  -- Import list events
-  -- "CHAT_MSG_ADDON"
+-- -- self:RegisterEvent("AUCTION_ITEM_LIST_UPDATE");
+-- -- self:RegisterEvent("AUCTION_OWNED_LIST_UPDATE");
+-- -- self:RegisterEvent("NEW_AUCTION_UPDATE");
+local AUCTIONATOR_EVENTS = { -- Addon Initialization Events
+"VARIABLES_LOADED", -- Trade Window Initialization Events
+"TRADE_SKILL_SHOW", -- Cache vendor prices event
+"MERCHANT_SHOW" -- Import list events
+-- "CHAT_MSG_ADDON"
 }
 
-local AUCTIONATOR_CUSTOM_EVENTS = {
-  -- AH Window Initialization Events
-  "AUCTION_HOUSE_SHOW",
-}
+local AUCTIONATOR_CUSTOM_EVENTS = { -- AH Window Initialization Events
+"AUCTION_HOUSE_SHOW"}
 
 -- Called from AuctionatorCore frame's OnLoad (defined in Auctionator.xml)
 -- coreFrame: AuctionatorCore Frame (see Auctionator.xml)
 function Auctionator.Events.CoreFrameLoaded(coreFrame)
-  Auctionator.Debug.Message("Auctionator.Events.CoreFrameLoaded")
+	Auctionator.Debug.Message("Auctionator.Events.CoreFrameLoaded")
 
-  FrameUtil.RegisterFrameForEvents(coreFrame, AUCTIONATOR_EVENTS)
+	FrameUtil.RegisterFrameForEvents(coreFrame, AUCTIONATOR_EVENTS)
 
-  FrameUtil.RegisterFrameForCustomEvents(coreFrame, AUCTIONATOR_CUSTOM_EVENTS)
+	FrameUtil.RegisterFrameForCustomEvents(coreFrame, AUCTIONATOR_CUSTOM_EVENTS)
 end

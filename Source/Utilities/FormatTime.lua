@@ -12,23 +12,23 @@ function formatter:GetMinInterval(seconds)
 end
 
 function formatter:GetMaxInterval()
-  return SecondsFormatter.Interval.Hours
+	return SecondsFormatter.Interval.Hours
 end
 
 function Auctionator.Utilities.FormatTimeLeft(seconds)
-  local timeLeftMinutes = math.ceil(seconds / 60);
-  local color = WHITE_FONT_COLOR
-  if timeLeftMinutes < 60 then
-    color = RED_FONT_COLOR;
-  end
+	local timeLeftMinutes = math.ceil(seconds / 60);
+	local color = WHITE_FONT_COLOR
+	if timeLeftMinutes < 60 then
+		color = RED_FONT_COLOR;
+	end
 
-  return color:WrapTextInColorCode(formatter:Format(seconds))
+	return color:WrapTextInColorCode(formatter:Format(seconds))
 end
 
 local hour = 60 * 60
-local SHORT     = "<" .. formatter:Format(hour/2) -- <30m
-local MEDIUM    = formatter:Format(hour/2) .. " - " .. formatter:Format(hour * 2)     -- 30m - 2h
-local LONG      = formatter:Format(hour * 2) .. " - " .. formatter:Format(hour * 12)  -- 2h - 12h
+local SHORT = "<" .. formatter:Format(hour / 2) -- <30m
+local MEDIUM = formatter:Format(hour / 2) .. " - " .. formatter:Format(hour * 2) -- 30m - 2h
+local LONG = formatter:Format(hour * 2) .. " - " .. formatter:Format(hour * 12) -- 2h - 12h
 local VERY_LONG = formatter:Format(hour * 12) .. " - " .. formatter:Format(hour * 48) -- 12h - 48h
 
 function Auctionator.Utilities.FormatTimeLeftBand(timeLeftBand)

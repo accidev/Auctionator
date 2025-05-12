@@ -1,13 +1,14 @@
 AuctionatorResetButtonMixin = {}
 
 function AuctionatorResetButtonMixin:OnLoad()
-  self.clickCallback = function() end
+	self.clickCallback = function()
+	end
 end
 
 function AuctionatorResetButtonMixin:OnClick()
-  self.clickCallback()
+	self.clickCallback()
 end
 
 function AuctionatorResetButtonMixin:SetClickCallback(callback)
-  self.clickCallback = callback
+	self.clickCallback = callback
 end

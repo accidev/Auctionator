@@ -1,9 +1,9 @@
 function Auctionator.Utilities.Slice(array, start, count)
-  local result = {}
+	local result = {}
 
-  for index = start, math.min(#array, start + count - 1) do
-    table.insert(result, array[index])
-  end
+	for index = start, math.min(#array, start + count - 1) do
+		table.insert(result, array[index])
+	end
 
-  return result
+	return result
 end

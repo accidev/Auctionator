@@ -1,15 +1,17 @@
 function Auctionator.Events.OnAuctionHouseShow()
-  Auctionator.Debug.Message("Auctionator.Events.OnAuctionHouseShow()")
+	Auctionator.Debug.Message("Auctionator.Events.OnAuctionHouseShow()")
 
-  if AuctionHouseFrame == nil then
-    return
-  end
+	if AuctionHouseFrame == nil then
+		return
+	end
 
-  Auctionator.AH.Initialize()
+	Auctionator.AH.Initialize()
 
-  if Auctionator.State.AuctionatorFrame == nil then
-    Auctionator.State.AuctionatorFrame = CreateFrame("FRAME", "AuctionatorAHFrame", AuctionHouseFrame, "AuctionatorAHFrameTemplate")
-  end
+	if Auctionator.State.AuctionatorFrame == nil then
+		Auctionator.State.AuctionatorFrame = CreateFrame("FRAME", "AuctionatorAHFrame", AuctionHouseFrame,
+			"AuctionatorAHFrameTemplate")
+	end
 
-  FrameUtil.RegisterFrameForCustomEvents(Auctionator.State.AuctionatorFrame, { "AUCTION_HOUSE_SHOW", "AUCTION_HOUSE_CLOSED" })
+	FrameUtil.RegisterFrameForCustomEvents(Auctionator.State.AuctionatorFrame,
+		{"AUCTION_HOUSE_SHOW", "AUCTION_HOUSE_CLOSED"})
 end

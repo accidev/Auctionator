@@ -317,9 +317,6 @@ AUCTIONATOR_LOCALES.ruRU = function()
 	L["RESULTS_NAME_COLUMN"] = "Название"
 	L["RESULTS_PRICE_COLUMN"] = "Цена"
 	L["RIGHT_CLICK"] = "ПКМ"
-	L["ROADMAP"] = "План Работы"
-	L["ROADMAP_TOOLTIP_TEXT"] =
-		"План работы, который мы запланировали для предстоящих выпусков Auctionator. Пожалуйста, проверьте здесь прогресс внедрения вашей любимой функции!"
 	L["SALES_PREFERENCE"] = "Предпочтение по Продажам"
 	L["SAVE_AS"] = "Сохранить как"
 	L["SEARCH"] = "Поиск"

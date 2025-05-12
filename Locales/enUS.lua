@@ -115,9 +115,6 @@ AUCTIONATOR_LOCALES.enUS = function()
 	L["BUG_TOOLTIP_HEADER"] = "Report a Bug on Github"
 	L["BUG_TOOLTIP_TEXT"] =
 		"If you encounter an error while using Auctionator, please report on Github. Please provide enough details so that we can reproduce the bug! Using !BugGrabber and BugSack addons will help us as well."
-	L["ROADMAP"] = "Technical Roadmap"
-	L["ROADMAP_TOOLTIP_TEXT"] =
-		"The technical roadmap defined the work we have planned for upcoming releases of Auctionator. Please check here for implementation progress towards your favorite feature!"
 	L["TRANSLATORS_HELP"] = "Please help translate!"
 	L["TRANSLATORS_RUSSIAN"] = "Russian"
 
@@ -194,7 +191,6 @@ AUCTIONATOR_LOCALES.enUS = function()
 	L["SPLASH_830_BUGS_2"] = "Please report bugs on Github %s"
 	L["SPLASH_830_BUGS_3"] =
 		"We are most active on Discord, and do not take bug reports on curseforge or Auctionator forums"
-	L["SPLASH_830_BUGS_4"] = "For the roadmap of upcoming features, visit %s"
 
 	L["SPLASH_830_DONE_HEADER"] = "Implemented Features"
 	L["SPLASH_830_DONE_1"] =

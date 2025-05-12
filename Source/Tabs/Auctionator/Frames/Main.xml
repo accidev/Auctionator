@@ -37,7 +37,7 @@
 
       <Frame name="$parentContributors" inherits="AuctionatorConfigurationSubHeadingFrame" parentKey="Contributors">
         <Attributes>
-          <Attribute name="subHeadingText" value="plusmouse" type="string"/>
+          <Attribute name="subHeadingText" value="accidev" type="string"/>
         </Attributes>
         <Anchors>
           <Anchor point="TOPLEFT" relativeTo="$parentContributorsHeading" relativePoint="BOTTOMLEFT" y="10"/>
@@ -94,28 +94,6 @@
           <Anchor point="TOPLEFT" relativeTo="$parentDiscordLink" relativePoint="BOTTOMLEFT" y="10"/>
         </Anchors>
       </Frame>
-
-      <Frame name="$parentTechnicalRoadmap" inherits="AuctionatorConfigurationCopyAndPasteFrame" parentKey="TechnicalRoadmap">
-        <Attributes>
-          <Attribute name="labelText" value="AUCTIONATOR_L_ROADMAP" type="string"/>
-          <Attribute name="copyText" value="https://discord.gg/addony-dlia-sirus-su-914079030125420565" type="string"/>
-          <Attribute name="tooltipTitleText" value="AUCTIONATOR_L_ROADMAP" type="string"/>
-          <Attribute name="tooltipText" value="AUCTIONATOR_L_ROADMAP_TOOLTIP_TEXT" type="string"/>
-        </Attributes>
-        <Anchors>
-          <Anchor point="TOPLEFT" relativeTo="$parentBugReportLink" relativePoint="BOTTOMLEFT" y="10"/>
-        </Anchors>
-      </Frame>
-
-      <Frame name="$parentTranslatorsHeading" inherits="AuctionatorConfigurationHeadingFrame" parentKey="TranslatorsHeading">
-        <Attributes>
-          <Attribute name="headingText" value="AUCTIONATOR_L_TRANSLATORS_HEADER" type="string"/>
-        </Attributes>
-        <Anchors>
-          <Anchor point="TOPLEFT" relativeTo="$parentTechnicalRoadmap" relativePoint="BOTTOMLEFT" y="15"/>
-        </Anchors>
-      </Frame>
-
 
       <Frame name="$parentruRU" inherits="AuctionatorTranslatorTemplate" parentKey="ruRU">
         <Attributes>
